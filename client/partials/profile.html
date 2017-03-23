@@ -1,0 +1,11 @@
+<div class="" ng-controller="UsersController">
+<p class="error" ng-if='successmessage'>{{successmessage}}</p>
+  <h1>Welcome:&nbsp{{user.first_name}}</h1>
+  <a href ng-click=logout(user._id)>Logout</a></br>
+<!-- with all the data we can then construct a more structured output -->
+  <h3 for="">Email:&nbsp{{user.email}}</h3></br>
+  <h3 for="">Firsnamt:&nbsp{{user.first_name}}</h3></br>
+  <h3 for="">Lastname:&nbsp{{user.last_name}}</h3></br>
+  <!-- <h3 for="">Password:&nbsp{{password}}</h3></br> -->
+  <h3 for="">Birthday:&nbsp{{user.birthday | date:'yyyy-MM-dd'}}</h3></br>
+</div>

@@ -1,0 +1,45 @@
+<div class="" ng-controller="UsersController">
+  <p class="error" ng-if='successmessage'>{{successmessage}}</p>
+  <h1>Welcome:please register or login</h1>
+  <fieldset>
+    <legend>Register</legend>
+    <form class="" ng-submit='register()'>
+      <label for="">Email:</label><input type="text"  ng-model='newuser.email'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.email'>{{message.email}}</p>
+      </div>
+      <label>First name:</label><input type="text" ng-model='newuser.first_name' ></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.first_name'>{{message.first_name}}</p>
+      </div>
+      <label>Last name:</label><input type="text" ng-model='newuser.last_name'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.last_name'>{{message.last_name}}</p>
+      </div>
+      <label>Password:</label><input type="password" ng-model='newuser.password'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.password'>{{message.password}}</p>
+      </div>
+      <label>Confirm password:</label><input type="password" ng-model='newuser.passwordConfirmation'></br>
+      <label>Birthday:</label><input type="Date"ng-model='newuser.birthday'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.birthday'>{{message.birthday}}</p>
+      </div>
+      <input type="submit" name="" value="Register">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend>Login</legend>
+    <form class=""  ng-submit='login()'></br>
+      <label>Email:</label><input type="text" ng-model='loginuser.email'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.lemail'>{{message.lemail}}</p>
+      </div>
+      <label>Password:</label><input type="password" ng-model='loginuser.password'></br>
+      <div class="errdiv" ng-if="message">
+         <p class='error' ng-if='message.lpassword'>{{message.lpassword}}</p>
+      </div>
+      <input type="submit" name="" value="Login">
+    </form>
+  </fieldset>
+</div>
