@@ -1,0 +1,28 @@
+<div class="" ng-controller="UsersController">
+  <p class="error" ng-if='successmessage'>{{successmessage}}</p>
+  <h1>Welcome:&nbsp{{user.username}}</h1>
+  <a href ng-click=logout(user._id)>Logout</a></br>
+</div>
+<fieldset name='fieldset' class='confieldset' ng-controller="PollsController">
+    <p class="errormessage">{{errormessage}}</p></b>
+    <a href="#!/polls/new">Create a new Poll</a> &nbsp&nbsp&nbsp&nbsp&nbspSearch<input id='filterbox' type="text" name="" value="" ng-model='filter' >
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Question</th>
+      <th>Data Posted</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="poll in polls | filter: filter | orderBy:-poll.createdAt" ">
+      <td>{{poll._user.username}}</td>
+      <td><a href="#!/polls/{{poll._id}}">{{poll.question}}</a></td>
+      <td>{{poll.createdAt | date:'hh:mm yyyy-MM-dd'}}</td>
+      <td>
+        <a ng-if='poll._user._id==user._id' href ng-click=deletepoll(poll._id)>Delete</a></td>
+    </tr>
+  </table>
+<br><br><br><br>
+<!-- <form class="" action="#!/polls/new" method="get">
+  <input type="submit" name="" value="New Poll">
+</form> -->
+</fieldset>

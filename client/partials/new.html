@@ -1,0 +1,39 @@
+<div class="" ng-controller="UsersController">
+  <p class="error" ng-if='successmessage'>{{successmessage}}</p>
+  <h1>Welcome:&nbsp{{user.username}}</h1>
+  <a href ng-click=logout(user._id)>Logout</a></br>
+</div>
+<fieldset name='fieldset'  ng-controller="PollsController">
+  <p class="errormessage">{{errormessage}}</p>
+    <a href="#!/polls">Go to Polls</a>
+  <form class="" name='form' method="post">
+    <label for="">Question</label>
+    <input type="text" name="" value="" ng-model="newpoll.question"><br>
+    <div class="errdiv" ng-if="message">
+       <p class='error' ng-if='message.question'>{{message.question}}</p>
+    </div>
+    <label for="">Options1</label>
+    <input type="text" name="" value="" ng-model="newpoll.option1"><br>
+    <div class="errdiv" ng-if="message">
+       <p class='error' ng-if='message.option1'>{{message.option1}}</p>
+    </div>
+    <label for="">Options2</label>
+    <input type="text" name="" value="" ng-model="newpoll.option2"><br>
+    <div class="errdiv" ng-if="message">
+       <p class='error' ng-if='message.option2'>{{message.option2}}</p>
+    </div>
+    <label for="">Options3</label>
+    <input type="text" name="" value="" ng-model="newpoll.option3"><br>
+    <div class="errdiv" ng-if="message">
+       <p class='error' ng-if='message.option3'>{{message.option3}}</p>
+    </div>
+    <label for="">Options4</label>
+    <input type="text" name="" value="" ng-model="newpoll.option4"><br>
+    <div class="errdiv" ng-if="message">
+       <p class='error' ng-if='message.option4'>{{message.option4}}</p>
+    </div><br>
+
+    <button id='addbutton' type="button" name="button" ng-click="createpoll()">Create Poll</button><br><br>
+
+  </form>
+</fieldset>

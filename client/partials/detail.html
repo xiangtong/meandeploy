@@ -1,0 +1,43 @@
+<div class="" ng-controller="UsersController">
+  <p class="error" ng-if='successmessage'>{{successmessage}}</p>
+  <h1>Welcome:&nbsp{{user.username}}</h1>
+  <a href ng-click=logout(user._id)>Logout</a></br>
+</div>
+<fieldset class='confieldset' name='fieldset'  ng-controller="PollsController">
+    <p class="errormessage">{{errormessage}}</p></b>
+    <a href="#!/polls/">Go to Polls</a>
+    <h2>{{poll.question}}</h2>
+    <p>Click the Vote button to choose one</p>
+  <table>
+    <tr>
+      <th>Option</th>
+      <th>current Count of Votes</th>
+      <th>Actions</th>
+    </tr>
+    <tr >
+      <td>{{poll.options1.key}}</td>
+      <td>{{poll.options1.value}}</td>
+      <td>
+      <button type="button" name="button" ng-click=updatepoll('options1')>Vote</button></td>
+    </tr>
+    <tr >
+      <td>{{poll.options2.key}}</td>
+      <td>{{poll.options2.value}}</td>
+      <td>
+      <button type="button" name="button" ng-click=updatepoll('options2')>Vote</button></td>
+    </tr>
+    <tr >
+      <td>{{poll.options3.key}}</td>
+      <td>{{poll.options3.value}}</td>
+      <td>
+      <button type="button" name="button" ng-click=updatepoll('options3')>Vote</button></td>
+    </tr>
+    <tr >
+      <td>{{poll.options4.key}}</td>
+      <td>{{poll.options4.value}}</td>
+      <td>
+      <button type="button" name="button" ng-click=updatepoll('options4')>Vote</button></td>
+    </tr>
+  </table>
+
+</fieldset>
